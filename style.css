@@ -4,56 +4,86 @@
     font-family: 'Outfit', sans-serif;
 }
 
-.main-area {
-    height: 100vh;
-    display: grid;
-    grid-template-columns: auto;
-    justify-content: center;
-    align-content: center;
-}
 
 .container {
-    height: auto;
-    width: 20vw;
     display: grid;
-    grid-template-rows: 3fr 2fr;
+    height: 100vh;
+    grid-template-columns: 1fr;
+    align-items: center;
+}
+
+.box {
+    width: 20% ;
+    height: 60%;
+    justify-self: center;
+    display: grid;
+    grid-template-rows: 3fr 1fr 1fr;
+    gap: 1em;
     background-color: hsl(0, 0%, 100%);
-    border-radius: 30px;
+    border-radius: 1em;
 }
 
-
-
-#image {
-    height: auto;
+#img {
     width: 90%;
-    padding: 5%;
-    border-radius: 10%;
+    height: 90%;
+    justify-self: center;
+    align-self: center;
+    border-radius: 1em;
 }
 
-.text {
-    min-width: 80%;
-    height: auto;
+.headline, .para {
+    width: 90%;
+    justify-self: center;
     text-align: center;
-    padding: 10%;
 }
 
-.text > h1 {
-    font-size: 1.5em;
-    line-height: 1.4em;
+h1 {
+    font-size: 1.8em;
+    line-height: 1.2em;
     color: hsl(218, 44%, 22%);
     font-weight: 700;
 }
 
-.text > p {
-    font-size: 1.2em;
-    line-height: 1.2em;
-    padding-top: 2em;
-    padding-bottom: 1em;
+p {
+    font-size: 0.95em;
+    line-height: 1.3em;
     color: hsl(220, 15%, 55%);
     font-weight: 400;
 }
 
-
 body {
     background-color: hsl(212, 45%, 89%);
 }
+
+@media all and (max-height: 800px) {
+    h1 {
+        font-size: 1.2em;
+        line-height: 1em; 
+    }
+
+    p {
+        font-size: 0.8em;
+        line-height: 1em;
+    }
+    
+}
+
+
+
+
+@media all and (max-width: 400px) {
+    .box {
+        width: 90%;
+    }
+    h1 {
+        font-size: 1.4em;
+        line-height: 1.2em; 
+    }
+
+    p {
+        font-size: 0.9em;
+        line-height: 1em;
+    }
+}
+
+
